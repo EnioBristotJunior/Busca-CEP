@@ -1,0 +1,132 @@
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa&family=MuseoModerno:wght@200&family=Poppins:wght@200;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@200&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@100;200;300&display=swap");
+/*font-family: 'Comfortaa', cursive;
+font-family: 'MuseoModerno', cursive;
+font-family: 'Poppins', sans-serif;
+font-family: 'Inter', sans-serif;
+font-family: 'Montserrat Alternates', sans-serif;*/
+
+:root {
+  --roxo: #8707ff;
+  --verdin: #1cfeba;
+  --branco: #eeeeee;
+  --roxin: #473bf0;
+  --azul: #004fff;
+  --blackaloy: #161a1e;
+  --cinzaaloy: #9a9a9a;
+  --cinzavideo: #2f2841;
+  --blackvideo: #201b2c;
+  --blackblue: #12131d;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--blackblue);
+  font-family: "Montserrat Alternates", sans-serif;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  gap: 100px;
+}
+
+/*Pesquisa do CEP*/
+
+.pesquisa {
+  width: 400px;
+  background-color: var(--blackvideo);
+  border-radius: 10px;
+}
+
+.pesquisa h1 {
+  color: var(--azul);
+  text-align: center;
+  padding: 20px 0 20px 0;
+  border-bottom: 1px solid var(--azul);
+}
+
+.pesquisa form {
+  padding: 25px;
+}
+
+/*Input*/
+
+.pesquisa .txt-field input {
+  width: 100%;
+  height: 40px;
+  padding: 0 10px;
+  background-color: var(--cinzavideo);
+  border: 2px solid transparent;
+  border-radius: 5px;
+  color: var(--azul);
+  transition: 0.4s;
+}
+
+.txt-field input::placeholder {
+  color: var(--blackaloy);
+}
+
+.txt-field input:hover {
+  box-shadow: 0 0 0 0.15vw var(--azul);
+}
+
+.txt-field input:focus {
+  box-shadow: 0 0 0 0.15vw var(--azul);
+}
+
+/*Botão*/
+
+.envia {
+  width: 100%;
+  height: 50px;
+  border-radius: 5px;
+  background-color: var(--azul);
+  border: none;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 4px;
+  font-family: "MuseoModerno", cursive;
+  transition: 800ms;
+  cursor: pointer;
+}
+
+.envia:hover {
+  box-shadow: 3px 4px 46px -8px var(--azul);
+}
+
+/*Resultado do CEP*/
+
+.resultado {
+  width: 500px;
+  background-color: var(--blackvideo);
+  border-radius: 10px;
+  padding: 25px;
+}
+
+.resultado .dados {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.resultado .toma {
+  color: var(--azul);
+}
+
+.resultado .result {
+  color: #ffffff;
+}

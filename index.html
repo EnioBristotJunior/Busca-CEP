@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./CSS/style.css" />
+    <title>CEP</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="pesquisa">
+        <h1>Pesquisar CEP</h1>
+        <form method="post">
+          <div class="txt-field">
+            <input
+              type="text"
+              placeholder="Digite seu CEP"
+              id="cep"
+              required
+              oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');"
+            />
+          </div>
+          <br />
+          <input
+            onclick="procura()"
+            type="button"
+            value="Pesquisar"
+            class="envia"
+            id="enviar"
+          />
+        </form>
+      </div>
+      <div class="resultado">
+        <div class="dados">
+          <p class="toma">Logradouro:</p>
+          <p class="result" id="logradouro"></p>
+        </div>
+        <br />
+        <div class="dados">
+          <p class="toma">Complemento:</p>
+          <p class="result" id="complemento"></p>
+        </div>
+        <br />
+        <div class="dados">
+          <p class="toma">Bairro:</p>
+          <p class="result" id="bairro"></p>
+        </div>
+        <br />
+        <div class="dados">
+          <p class="toma">Localidade:</p>
+          <p class="result" id="localidade"></p>
+        </div>
+        <br />
+        <div class="dados">
+          <p class="toma">Unidade Federal:</p>
+          <p class="result" id="uf"></p>
+        </div>
+      </div>
+    </div>
+
+    <script src="./JS/index.js"></script>
+  </body>
+</html>
